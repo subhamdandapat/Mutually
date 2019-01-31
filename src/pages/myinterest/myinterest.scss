@@ -1,0 +1,93 @@
+page-myinterest {
+    .toolbar-background.toolbar-background-md {
+        background: transparent;
+    }
+    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+        display: none;
+    }
+    ion-icon {
+        float: right;
+        color: #fff;
+        font-size: 34px;
+        position: absolute;
+        right: 11px;
+        top: 17%;
+        bottom: 0;
+        margin: 0 auto;
+    }
+    ion-navbar.toolbar.toolbar-md {
+        background: #4d3f9c;
+    }
+     .toolbar-title-md {
+        text-align: center;
+        margin-left: -1.3em;
+        color: #fff;
+    }
+    ion-content.content.content-md {
+        background: #eaeaea;
+    }
+    .item-leave-height{
+        margin: 1em auto;
+    }
+    .radio{
+        font-size: 17px;
+        color: #616062;
+        margin: 1em 13px;
+        vertical-align: middle;
+        .radios {
+            margin: 0 1em;
+
+        }
+        .adjust {
+            margin: 0 0.5em;
+        }
+        .radio-icon {
+            transform: scale(1.5);
+        }
+        .radio-md .radio-checked{
+            border-color: #8356c8;
+            background-image: url('../../assets/imgs/checked.png');
+            background-size: cover;
+        }
+        .radio-md .radio-inner{
+            background: none;
+        }
+        
+        .radio-md .radio-icon{
+            border-color: #8356c8;
+
+        }
+    }
+    .other{
+    color: #8356c8;
+    font-size: 17px;
+    span{
+         color: #42039c;
+    }
+    }
+    .input-has-focus
+  .input-cover {
+        display: none;
+  }
+    ion-checkbox.checkbox.checkbox-md {
+        transform: scale(1.5);
+        border-radius: 50%;
+        margin: 0 10px;
+        vertical-align: middle;
+    }
+    .checkbox-md .checkbox-checked {
+        border-color:#8356c8;
+        background-color: #8356c8;
+        border-radius: 50%;
+    }
+    .checkbox-md .checkbox-icon{
+        border-radius: 50%;
+        border-color:#8356c8;
+        background-color: #8356c8;
+    }
+    .grid ion-col.col {
+        margin: 1em 0;
+    }
+
+
+}

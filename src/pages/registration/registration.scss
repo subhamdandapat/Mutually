@@ -1,0 +1,120 @@
+page-registration {
+    ion-content.content.content-md {
+        background:#4d3f9c;
+    }
+.svgs{
+    height: 50px;
+    width: 50px;
+}
+.toolbar-background.toolbar-background-md {
+    background: transparent;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+    display: none;
+}
+.toolbar-title-md {
+    text-align: center;
+    margin-left: -1.3em;
+    color: #fff;
+}
+.back-button.show-back-button {
+    color: #fff;
+}
+.profilepic-bor {
+    width: 130px;
+    height: 130px;
+    border-radius: 360px;
+    border: 1px solid #6935b0;
+    margin: 0 auto;
+    position: relative;
+    .profilepic {
+        width: 100px;
+        height: 100px;
+        border-radius: 360px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        right: 0;
+    }
+    
+}
+
+ion-label {
+    color: #fff !important;
+}
+ion-item.item.item-block.item-md.item-input.item-label-floating {
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+
+}
+.regis{
+    text-align: center;
+    width: 100%;
+    .regisbtn {
+        background: #7369fa;
+        border-radius: 50px;
+        height: 50px;
+        margin-top: 2em;
+        width: 91%;
+        text-align: center;
+    }
+    .google {
+        background: #cf4332;
+        box-shadow: none;
+        height: 26px;
+        margin: 0;
+        padding: 0;
+        width: 42%;
+        font-size: 10px;
+        text-transform: none;
+        margin-left: 1em;
+
+    }
+    .facebook {
+        background: #3c66c4;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        height: 26px;
+        margin: 0;
+        padding: 0;
+        width: 42%;
+        font-size: 10px;
+        text-transform: none;
+        margin-right: 1em;
+
+    }
+    i.fa.fa-facebook {
+        margin: 1px 10px 0 1px;
+        font-size: 18px;
+    }
+    i.fa.fa-google-plus{
+        font-size: 15px;
+    margin: 0 0 2px 16px;
+    }
+    p {
+        opacity: 0.6;
+        color: #dba8f2;
+        font-size: 16px;
+        margin-top: 2em;
+    }
+    .login{
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        opacity: 1;
+        margin: 0;
+    }
+    .social  {
+   margin-top: 15px;
+    }
+    // ion-input.input.input-md {
+    //     border-bottom: 1px solid #9580be;
+    // }
+}
+
+
+}

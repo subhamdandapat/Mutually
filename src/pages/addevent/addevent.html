@@ -1,0 +1,171 @@
+<ion-header>
+  
+      <ion-navbar>
+          <button ion-button menuToggle class="sidenav" >
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          <ion-title>Add Event</ion-title>
+          <!-- <ion-icon name="add"></ion-icon> -->
+      </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  <div class="cover">
+      <ion-item>
+          <ion-label>Event Schedule</ion-label>
+  
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+  
+      </ion-item>
+  
+      <ion-grid class="userimg-grid">
+              <ion-row class="border">
+                <ion-col col-12 text-center no-padding>
+                  <!-- <div class="userimg-round">
+                    <img src="{{imageId}}" />
+                    <div class="overlay">
+                      <button ion-button clear no-margin (click)="presentActionSheet()">
+                        <ion-icon name="camera"></ion-icon>
+                      </button>
+                    </div>
+                  </div> -->
+                  <div class="userimg-roundplaceholder" (click)="presentActionSheet()" [ngStyle]="{'background':'#ffffff url(assets/images/avatar.png) no-repeat'}">
+                    <div *ngIf="imageId" class="userimg-round" [ngStyle]="{'background-image': 'url(' + imageId + ')'}">
+                    </div>
+                    <div class="overlay">
+                      <button ion-button clear no-margin >
+                        <!-- <ion-icon name="camera"></ion-icon> -->
+                        <p>{{uploadP}}</p>
+                      </button>
+                    </div>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+  
+      <ion-item>
+          <ion-label class="m0" color="primary" floating>Event Name</ion-label>
+          <ion-input [(ngModel)]="eventName"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label>Time</ion-label>
+  
+          <ion-datetime displayFormat="h:mm A" [(ngModel)]="time"></ion-datetime>
+  
+      </ion-item>
+  
+      <ion-item>
+              <ion-label class="m0" color="primary" floating>Location</ion-label>
+              <ion-input [(ngModel)]="location"></ion-input>
+          </ion-item>
+  
+  
+  
+      <!-- <div class="radio" radio-group>
+          <span class="radios">
+  
+              <ion-radio value="a"></ion-radio>
+              Free
+          </span>
+  
+          <span class="radios">
+              <ion-radio value="b"></ion-radio>
+              Custom
+          </span>
+   
+      </div> -->
+
+
+      <ion-row radio-group [(ngModel)]="val">
+            <ion-col>
+              <ion-item>
+                <ion-label>Free</ion-label>
+                <ion-radio value="Free"></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+               <ion-label>Custom</ion-label>
+                <ion-radio value="Custom"></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+
+  
+      <ion-item>
+              <ion-label class="m0" color="primary" floating>Your custom price</ion-label>
+              <ion-input [(ngModel)]="price"></ion-input>
+          </ion-item>
+  
+          <!-- <div class="radio" radio-group [(ngModel)]="age">
+                  <span class="radios">
+          
+                      <ion-radio value="18+"></ion-radio>
+                      18+
+                  </span>
+          
+                  <span class="radios">
+                      <ion-radio value="21+"></ion-radio>
+                      21+
+                  </span>
+           
+              </div> -->
+
+              <ion-row radio-group [(ngModel)]="age">
+                    <ion-col>
+                      <ion-item>
+                        <ion-label>18+</ion-label>
+                        <ion-radio value="18+"></ion-radio>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col>
+                      <ion-item>
+                       <ion-label>21+</ion-label>
+                        <ion-radio value="21+"></ion-radio>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+  
+      <ion-item>
+          <ion-textarea rows="5" placeholder="About" [(ngModel)]="about"></ion-textarea>
+      </ion-item>
+    
+  
+      <!-- <div class="radio" radio-group [(ngModel)]="eventType">
+              <span class="radios">
+      
+                  <ion-radio value="Private"></ion-radio>
+                  Private
+              </span>
+      
+              <span class="radios">
+                  <ion-radio value="Public"></ion-radio>
+                  Public
+              </span>
+       
+          </div> -->
+
+
+          <ion-row radio-group [(ngModel)]="eventType">
+                <ion-col>
+                  <ion-item>
+                    <ion-label>Private</ion-label>
+                    <ion-radio value="Private"></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col>
+                  <ion-item>
+                   <ion-label>Public</ion-label>
+                    <ion-radio value="Public"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+          <button ion-button class="save" (click)="uploadImage()" >Post</button>
+      </div>
+      </ion-content>

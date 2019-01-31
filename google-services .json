@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "948142671268",
+    "firebase_url": "https://mutually-34d8e.firebaseio.com",
+    "project_id": "mutually-34d8e",
+    "storage_bucket": "mutually-34d8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948142671268:android:e3cd5eac9715f4ba",
+        "android_client_info": {
+          "package_name": "com.mutually.findFriend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948142671268-e2lo93nc8s35cr11huqdg14f6914352c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW81LW_j1v7k3dLmHDx2EuolLOHLmlxAQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

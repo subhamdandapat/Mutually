@@ -1,0 +1,267 @@
+<ion-header>
+  
+    <ion-navbar>
+        <button ion-button menuToggle class="sidenav" >
+            <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title>My Interests</ion-title>
+      <!-- <ion-icon name="add"></ion-icon> -->
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-item class="item-leave-height">
+      <ion-label>Select Main Categories</ion-label>
+      <ion-select [(ngModel)]="maincategories">
+        <ion-option value="Fitness/Wellness">Fitness/ Wellness</ion-option>
+        <ion-option value="Art/Design">Art/ Design</ion-option>
+        <ion-option value="Music/Performing Arts">Music/Performing Arts</ion-option>
+        <ion-option value="Fashion/Makeup">Fashion/Makeup</ion-option>
+        <ion-option value="Language/ Literature">Language/Literature</ion-option>
+        <ion-option value="Food">Food</ion-option>
+        <ion-option value="Technology">Technology</ion-option>
+        <ion-option value="Games">Games</ion-option>
+        <ion-option value="Finance">Finance</ion-option>
+        <ion-option value="Other">Other</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item class="item-leave-height">
+      <ion-label>Select Sub Categories</ion-label>
+      <ion-select [(ngModel)]="subcategories">
+        <ion-option value="Cricket">Cricket</ion-option>
+        <ion-option value="Football">Football</ion-option>
+        <ion-option value="Hockey">Hockey</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <!-- <div class="radio" radio-group [(ngModel)]="type">
+      <span class="radios" >
+       
+        <ion-radio value="a"></ion-radio>
+        Begineer
+      </span>
+  
+      <span class="radios">
+        <ion-radio value="b"></ion-radio>
+        Intermediate
+      </span>
+      <br>
+      <span class="radios">
+        <ion-radio value="c"></ion-radio>
+        Advanced
+      </span>
+      <span class="adjust">
+        <ion-radio value="d"></ion-radio>
+        Pro
+      </span>
+    </div> -->
+
+
+
+    <div  radio-group >
+        <ion-list radio-group [(ngModel)]="type">
+            <ion-item>
+              <ion-label>Beginner</ion-label>
+              <ion-radio value="a" checked></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Intermediate</ion-label>
+              <ion-radio value="b"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Advanced</ion-label>
+              <ion-radio value="c" [disabled]="isDisabled"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Pro</ion-label>
+                <ion-radio value="d" [disabled]="isDisabled"></ion-radio>
+              </ion-item>
+        </ion-list>
+      </div>
+  
+    <ion-item>
+        <ion-textarea rows="5" placeholder="Enter a description"  [(ngModel)]="description"></ion-textarea>
+      </ion-item>
+      <p class="other">Other Interests</p>
+      <ion-item>
+          <!-- <ion-label color="primary" floating>Other Interest</ion-label> -->
+          <ion-input [(ngModel)]="other"></ion-input>
+        </ion-item>
+  
+        <p class="other">Type of Person/Preferences</p>
+  
+  
+        <ion-grid class="grid">
+            <ion-row>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="Indoors" [(ngModel)]="indoors"></ion-checkbox>
+                      Indoors
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="Outdoors" [(ngModel)]="outdoors"></ion-checkbox>
+                      Outdoors
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="Citylife" [(ngModel)]="citylife"></ion-checkbox>
+                      City Life
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="surburbanlife" [(ngModel)]="surburbanlife"></ion-checkbox>
+                      Surburban Life
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="rural"  [(ngModel)]="rural"></ion-checkbox>
+                      Rural Life
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox  value="warm" [(ngModel)]="warm"></ion-checkbox>
+                      Warm Weather
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="cold"  [(ngModel)]="cold"></ion-checkbox>
+                      Cold Weather
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox  value="introvert" [(ngModel)]="introvert"></ion-checkbox>
+                      Introvert
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="extrovert" [(ngModel)]="extrovert"></ion-checkbox>
+                      Extrovert
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                <span>
+                    <ion-checkbox value="extrovertedintrovert" [(ngModel)]="extrovertedintrovert"></ion-checkbox>
+                    Extroverted_Introvert
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="vphActive" [(ngModel)]="vphActive"></ion-checkbox>
+                    Very Physically Active
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="sphActive" [(ngModel)]="sphActive"></ion-checkbox>
+                    Semi Physically Active
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="nphActive" [(ngModel)]="nphActive"></ion-checkbox>
+                    Not Physically Active
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="messy" [(ngModel)]="messy"></ion-checkbox>
+                    Messy
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="omessy" [(ngModel)]="omessy"></ion-checkbox>
+                    Organized Messy
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="clean" [(ngModel)]="clean"></ion-checkbox>
+                    Clean
+                </span>
+            </ion-col>
+              <!-- <ion-col col-6>
+                  <span>
+                      <ion-checkbox [(ngModel)]="extint"></ion-checkbox>
+                      ExtrovertedIntrovert
+                  </span>
+              </ion-col> -->
+              <!-- <ion-col col-6>
+                  <span>
+                      <ion-checkbox [(ngModel)]="phActive"></ion-checkbox>
+                      Physically Active
+                  </span>
+  
+              </ion-col> -->
+              <!-- <ion-col col-6>
+                  <span>
+                      <ion-checkbox [(ngModel)]="phInactive"></ion-checkbox>
+                      Physically Inactive
+                  </span>
+              </ion-col> -->
+            </ion-row>
+        </ion-grid>
+        <p class="other">Favorites - <span>Pick 3</span></p>
+  
+  
+        <ion-grid class="grid">
+            <ion-row>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox  value="music" [(ngModel)]="music"></ion-checkbox>
+                      Music
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="food" [(ngModel)]="food"></ion-checkbox>
+                      Food
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="book" [(ngModel)]="book"></ion-checkbox>
+                      Book
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox  value="pets" [(ngModel)]="pets"></ion-checkbox>
+                      Pets
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="tvShows" [(ngModel)]="tvShows"></ion-checkbox>
+                      TV Shows
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="season" [(ngModel)]="season"></ion-checkbox>
+                      Season
+                  </span>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+        <button ion-button round outline (click)="saveUserInterests()">INTEREST</button>
+  </ion-content>

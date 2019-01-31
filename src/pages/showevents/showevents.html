@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle class="sidenav" >
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Events List</ion-title>
+      <ion-icon name="add" (click)="moveToAddev()"></ion-icon>
+      
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <div *ngFor="let event of eventsData" class="border">
+      <ion-item text-center class="noBorder">
+      <!-- <img src="assets/imgs/cover.jpg" class="uploadedImage"> -->
+      <div class="backImg">
+      <img src="https://iontest.herokuapp.com/eventImage/{{event.image}}" class="uploadedImage" alt="">
+      </div>
+      </ion-item>
+      <ion-item>
+         Event Name
+          <ion-badge item-end>{{event.eventName}}</ion-badge>
+        </ion-item>
+      
+    <ion-item>
+      Event Schedule
+      <ion-badge item-end>{{event.eventDate}}</ion-badge>
+    </ion-item>
+    <ion-item>
+      Time
+      <ion-badge item-end>{{event.time}}</ion-badge>
+    </ion-item>
+    <ion-item>
+      Location
+      <ion-badge item-end>{{event.location}}</ion-badge>
+    </ion-item>
+    <ion-item class="noBorder">
+      Custom price
+      <ion-badge item-end>${{event.price}}</ion-badge>
+    </ion-item>
+  </div>
+  </ion-content>
+  

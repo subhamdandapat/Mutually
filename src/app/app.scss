@@ -14,3 +14,137 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+//==== menu header 
+
+.menu-inner {
+    // height define
+    ion-header{
+        height: 120px;
+        color:#ffffff;
+    }
+    .toolbar{
+        min-height: 120px;
+    }
+    
+    //toolbar color
+    .toolbar-background {
+        border-color: #ffffff;
+        background:  linear-gradient(to right, rgba(195, 164, 208, 0.37) 45%, rgba(124, 157, 192, 0.64) 100%), url(../assets/images/2.jpg), url(../assets/images/2.jpg);
+        background-size: cover;
+    }
+    //menu background image none
+    .header-md::after{
+        background-image: none;
+    }
+    // font-size
+    .points{
+        font-size: 23px;
+        font-weight: 100;
+        font-family: 'Lato', sans-serif;
+    //   letter-spacing: 1px;
+    }
+    .points-text{
+        font-weight: 100;
+        font-size: 14px;
+        font-family: 'Lato', sans-serif;
+        letter-spacing: 1px;
+    }
+    .points-text.wallet{
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 0;
+    }
+    //signout button
+    .header{
+        position: relative;
+    }
+    .greenbtn {
+        position: absolute;
+        bottom: -17px;
+        font-size: 13px;
+        margin: 0 auto;
+        right: 22px;
+        padding: 15px;
+        text-transform: none;
+        height: 35px;
+        z-index: 12;
+        font-weight: 400;
+        box-shadow: 0 7px 15px 0px rgba(139, 245, 158, 0.5);
+        font-family: 'Lato', sans-serif;
+    }
+    //list margin top
+    .mt-19{
+        margin-top:19px;
+    }
+    //list item fontsize
+    .list .item-md{
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        min-height: 40px !important;
+        padding-left: 32px;
+    }
+    //list border buttom none
+    .item-md.item-block .item-inner {
+        border-bottom: none;
+    }
+    //list items activeted
+    button.item .activted {
+        border-left: 5px solid #c768f6 !important;
+        background: #f7f7f7;
+        color:#a675f3;
+    }
+    //
+    .label-md {
+        margin: 10px 8px 10px 0;
+        color: #555;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    .label-ios{
+        margin: 0px 8px 0 0;
+        color: #555;
+        font-weight: 400;
+        letter-spacing: 0;
+        font-size: 15px;
+    }
+    //global class
+    .px-13{
+        padding:0px 13px;
+    }
+    //light menu css
+    .lightMenu button .label{
+        color:#929090;
+    }
+    //css for ios
+    .list-ios > .item-block:first-child {
+        border-top: none;
+    }
+    .list-ios > .item-block:last-child {
+        border-bottom: none;
+    }
+    .item-ios.item-block .item-inner {
+        border-bottom: none;
+        background-image: none;
+    }
+    // for back button
+    ion-header{
+        .back-button-text-ios {
+            display: none;
+        }
+    }
+
+   
+}
+
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (min-height: 600px) and (min-width: 768px){
+    .modal-wrapper {
+        box-shadow:none;
+    }
+}

@@ -1,0 +1,61 @@
+<!--
+  Generated template for the FriendlistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle class="sidenav" >
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Friendlist</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div *ngFor="let req of friendlistar">
+        
+          <ion-card >
+            
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="img/marty-avatar.png">
+                </ion-avatar>
+                <h2> {{req.username}} </h2>
+                <!-- <p>November 5, 1955</p> -->
+              </ion-item>
+              <ion-item (click)="goChat(req._id)">
+                <button ion-button icon-start clear item-start >
+                  <ion-icon md="md-send"></ion-icon>
+                 Message
+                </button>
+              </ion-item>
+          </ion-card>
+        </div>
+
+        <!-- <div *ngFor="let reqt of friendRequestsToUser">
+            
+              <ion-card *ngIf="reqt.requestAccept==true">
+                
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="img/marty-avatar.png">
+                    </ion-avatar>
+                    <h2> {{reqt.fromUserName}} </h2>
+                    <p>November 5, 1955</p>
+                  </ion-item>
+                  <ion-item (click)="goChat1(reqt.fromUser)">
+                    <button ion-button icon-start clear item-start>
+                      <ion-icon md="md-send"></ion-icon>
+                     Message
+                    </button>
+                  </ion-item>
+              </ion-card>
+            </div> -->
+
+</ion-content>

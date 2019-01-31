@@ -1,0 +1,143 @@
+<ion-header>
+  
+    <ion-navbar>
+        <button ion-button menuToggle class="sidenav" >
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Profile</ion-title>
+      <button (click)="gotoEdit()">
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    </button>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <div class="cover">
+      <div class="btm">
+  
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4>
+              <div class="fb">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <p>789 Followers</p>
+              </div>
+            </ion-col>
+            <ion-col col-4>
+              <!-- <div class="profile"> -->
+                <!-- <img src="{{trueimage}}"> -->
+
+
+                <div class="userimg-roundplaceholder" [ngStyle]="{'background':'#ffffff url(assets/images/avatar.png) no-repeat'}">
+                  <div *ngIf="userData.filename" class="userimg-round" [ngStyle]="{'background-image': 'url(' + preimageid + userData.filename + ')'}"></div>
+                </div>
+
+
+
+
+
+              <!-- </div> -->
+            </ion-col>
+            <ion-col col-4>
+              <div class="fb">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <p>789 Followers</p>
+              </div>
+  
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  
+    <div class="profiledata">
+      <ion-item>
+        <div class="left" item-left>
+          First Name
+        </div>
+        <div class="right" item-right>
+          {{userData.username}}
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          Email
+        </div>
+        <div class="right" item-right>
+         {{userData.email}}</div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          Phone Number
+        </div>
+        <div class="right" item-right>
+         {{userData.phone}}</div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          City
+        </div>
+        <div class="right" item-right>
+         {{userData.city}}</div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          Education
+        </div>
+        <div class="right" item-right>
+         {{userData.education}}</div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          Work
+        </div>
+        <div class="right" item-right>
+         {{userData.work}}</div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          Kids
+        </div>
+        <div class="right" item-right>
+         {{userData.kids}}</div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          Gender
+        </div>
+        <div class="right" item-right>
+          {{userData.gender}}
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          Status
+        </div>
+        <div class="right" item-right>
+          {{userData.status}}
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="left" item-left>
+          Website
+        </div>
+        <div class="right" item-right>
+          Dannywilliam.com
+        </div>
+      </ion-item>
+  
+  
+      <ion-item>
+        <ion-label>Facebook</ion-label>
+        <ion-toggle checked="false"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Instagram</ion-label>
+        <ion-toggle checked="false"></ion-toggle>
+      </ion-item>
+  
+    </div>
+  
+  </ion-content>

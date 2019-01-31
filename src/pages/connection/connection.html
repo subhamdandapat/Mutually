@@ -1,0 +1,135 @@
+<ion-header>
+  
+    <ion-navbar>
+        <button ion-button menuToggle class="sidenav" >
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Find Connections</ion-title>
+      <!-- <ion-icon name="add"></ion-icon> -->
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6  *ngFor="let user of users">
+          <div class="card" (click)="showDetails(user._id)">
+
+
+
+              <!-- <div class="propic" (click)="showDetails(user._id)"><img src="https://iontest.herokuapp.com/image/+{{user.filename}}"></div> -->
+              <div class="userimg-roundplaceholder"  [ngStyle]="{'background':'#ffffff url(assets/images/avatar.png) no-repeat'}">
+                <div *ngIf="user.filename" class="userimg-round" [ngStyle]="{'background-image': 'url(' + preimageid + user.filename + ')'}"></div>
+              </div>
+
+
+
+            <p class="name">{{user.username}}</p>
+            <p class="interest">{{user.status}}</p>
+            <div class="more">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+           <g>
+             <g>
+               <rect y="385.44" width="512.002" height="54.437"/>
+             </g>
+           </g>
+           <g>
+             <g>
+               <path d="M421.034,195.21c-36.232-36.232-82.281-59.07-132.146-66.061c3.25-5.598,5.12-12.091,5.12-19.016
+                 c0-20.957-17.05-38.008-38.008-38.008s-38.008,17.05-38.008,38.008c0,6.925,1.871,13.418,5.12,19.016
+                 c-49.866,6.991-95.915,29.829-132.146,66.061c-42.85,42.849-66.971,99.432-68.288,159.818h466.644
+                 C488.005,294.641,463.884,238.059,421.034,195.21z"/>
+             </g>
+           </g>
+           </svg> 
+           <span>5+ More</span>
+           </div>
+          </div>
+        </ion-col>
+  
+        <!-- <ion-col col-6>
+            <div class="card">
+                <div class="propic"><img src="assets/imgs/propic-2.png"></div>
+              <p class="name">Jessica Butler</p>
+              <p class="interest">Cook,trevveler</p>
+              <div class="more">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+             <g>
+               <g>
+                 <rect y="385.44" width="512.002" height="54.437"/>
+               </g>
+             </g>
+             <g>
+               <g>
+                 <path d="M421.034,195.21c-36.232-36.232-82.281-59.07-132.146-66.061c3.25-5.598,5.12-12.091,5.12-19.016
+                   c0-20.957-17.05-38.008-38.008-38.008s-38.008,17.05-38.008,38.008c0,6.925,1.871,13.418,5.12,19.016
+                   c-49.866,6.991-95.915,29.829-132.146,66.061c-42.85,42.849-66.971,99.432-68.288,159.818h466.644
+                   C488.005,294.641,463.884,238.059,421.034,195.21z"/>
+               </g>
+             </g>
+             </svg> 
+             <span>5+ More</span>
+             </div>
+            </div>
+          </ion-col>
+          <ion-col col-6>
+              <div class="card">
+                  <div class="propic"><img src="assets/imgs/propic-2.png"></div>
+                <p class="name">Jessica Butler</p>
+                <p class="interest">Cook,trevveler</p>
+                <div class="more">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+               <g>
+                 <g>
+                   <rect y="385.44" width="512.002" height="54.437"/>
+                 </g>
+               </g>
+               <g>
+                 <g>
+                   <path d="M421.034,195.21c-36.232-36.232-82.281-59.07-132.146-66.061c3.25-5.598,5.12-12.091,5.12-19.016
+                     c0-20.957-17.05-38.008-38.008-38.008s-38.008,17.05-38.008,38.008c0,6.925,1.871,13.418,5.12,19.016
+                     c-49.866,6.991-95.915,29.829-132.146,66.061c-42.85,42.849-66.971,99.432-68.288,159.818h466.644
+                     C488.005,294.641,463.884,238.059,421.034,195.21z"/>
+                 </g>
+               </g>
+               </svg> 
+               <span>5+ More</span>
+               </div>
+              </div>
+            </ion-col>
+            <ion-col col-6>
+                <div class="card">
+                    <div class="propic"><img src="assets/imgs/propic-2.png"></div>
+                  <p class="name">Jessica Butler</p>
+                  <p class="interest">Cook,trevveler</p>
+                  <div class="more">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+                 <g>
+                   <g>
+                     <rect y="385.44" width="512.002" height="54.437"/>
+                   </g>
+                 </g>
+                 <g>
+                   <g>
+                     <path d="M421.034,195.21c-36.232-36.232-82.281-59.07-132.146-66.061c3.25-5.598,5.12-12.091,5.12-19.016
+                       c0-20.957-17.05-38.008-38.008-38.008s-38.008,17.05-38.008,38.008c0,6.925,1.871,13.418,5.12,19.016
+                       c-49.866,6.991-95.915,29.829-132.146,66.061c-42.85,42.849-66.971,99.432-68.288,159.818h466.644
+                       C488.005,294.641,463.884,238.059,421.034,195.21z"/>
+                   </g>
+                 </g>
+                 </svg> 
+                 <span>5+ More</span>
+                 </div>
+                </div>
+              </ion-col> -->
+  
+      </ion-row>
+    </ion-grid>
+  
+  </ion-content>

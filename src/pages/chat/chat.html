@@ -1,0 +1,103 @@
+
+
+
+<ion-header>
+  <header class="gradient-bg headerheight-90">
+    <div class="topbar"></div>
+    <ion-grid text-center>
+      <ion-row>
+        <ion-col col-3 padding-top>
+          <div class="menu" text-left>
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 384.97 384.97" style="enable-background:new 0 0 384.97 384.97;"
+              xml:space="preserve" width="21px">
+              <g>
+                <g>
+                  <path d="M12.03,120.303h360.909c6.641,0,12.03-5.39,12.03-12.03c0-6.641-5.39-12.03-12.03-12.03H12.03    c-6.641,0-12.03,5.39-12.03,12.03C0,114.913,5.39,120.303,12.03,120.303z"
+                    fill="#FFFFFF" />
+                  <path d="M372.939,180.455H12.03c-6.641,0-12.03,5.39-12.03,12.03s5.39,12.03,12.03,12.03h360.909c6.641,0,12.03-5.39,12.03-12.03    S379.58,180.455,372.939,180.455z"
+                    fill="#FFFFFF" />
+                  <path d="M372.939,264.667H132.333c-6.641,0-12.03,5.39-12.03,12.03c0,6.641,5.39,12.03,12.03,12.03h240.606    c6.641,0,12.03-5.39,12.03-12.03C384.97,270.056,379.58,264.667,372.939,264.667z"
+                    fill="#FFFFFF" />
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+              </g>
+            </svg>
+
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <p class="margin-0"></p>
+
+          <div *ngIf="selectedUserName" class="user-name">
+            {{selectedUserName}}
+          </div>
+
+        </ion-col>
+        <ion-col col-3 padding-top text-right>
+          <div class="notifications">
+           
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="line-green"></div>
+  </header>
+</ion-header>
+
+<ion-content #content padding class="bg-deepgray">
+  <section class="chat-content">
+    <ion-grid>
+      <ion-row>
+      
+        <div class="col-width" *ngFor="let message of messages">
+          <div [class.float-right]="alignMessage(message.tomUserId)" [class.float-left]="alignMessage(message.toUserId)==false">
+            
+            <div [class.right-msg]="alignMessage(message.toUserId)" [class.left-msg]="alignMessage(message.toUserId)==false">
+              
+              {{ message.message}}
+              <span class="time">{{ message.timestamp }}</span>
+            </div>
+          </div>
+        </div>
+      </ion-row>
+    </ion-grid>
+  </section>
+  <ion-label id="myLabel">&nbsp;</ion-label>
+
+</ion-content>
+
+<ion-footer class="bg-gray">
+  <ion-toolbar>
+    <ion-grid>
+
+      <!-- <div class="typing" *ngIf="this.info.typing_Status">
+        <p><i> typing....</i></p>
+      </div> -->
+      <ion-row class="white-bg">
+        <ion-col col-10>
+          <div class="form-group" no-margin>
+            <textarea class="chat-input" type="text" [(ngModel)]="message"></textarea>
+          </div>
+        </ion-col>
+        <ion-col>
+          <ion-buttons end>
+            <button ion-button icon-right color="primary" (click)="sendMessage()">
+          <ion-icon name="send"></ion-icon>
+          </button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,135 @@
+page-connection {
+
+
+    ion-content.content.content-md {
+        background:#4d3f9c;
+    }
+
+.toolbar-background.toolbar-background-md {
+    background: transparent;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+    display: none;
+}
+.toolbar-title-md {
+    text-align: center;
+    margin-left: -1.3em;
+    color: #fff;
+}
+.back-button.show-back-button {
+    color: #fff;
+}
+.card {
+    background: #f7f7f1;
+    margin: 2px;
+    padding: 7px;
+    text-align: center;
+}
+.propic {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px auto;
+}
+p.name {
+    width: 100%;
+    height: auto;
+    color: #83888c;
+    font-size: 18px;
+    border-bottom: 1px solid #eaeaea;
+    margin: 0px 0 5px 0;
+    padding-bottom: 5px;
+}
+p.interest {
+    width: 100%;
+    height: auto;
+    color: #a4a8b2;
+    font-size: 14px;
+    display: block;
+    margin: 0;
+    margin-bottom:8px; 
+}
+.more svg {
+    width: 20px;
+    fill: #42039c;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.more {
+    color: #42039c;
+    font-size: 14px;
+    text-align: right;
+    vertical-align: middle;
+}
+.scroll-content {
+    background: #eaeaea;
+}
+ion-icon {
+    float: right;
+    color: #fff;
+    font-size: 34px;
+    position: absolute;
+    right: 11px;
+    top: 17%;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+
+
+
+.dboard-userimg-div{
+    background: url('../assets/images/BG-DBoard.png');
+    background-size: cover;
+    width:100%;
+    // height:217px;
+    display: table;
+    position: relative;
+}
+.dboard-userimg-div{
+    background: linear-gradient(to right, #a070f8 0%, #657cfc 100%);
+    width:100%;
+    // height:217px;
+    display: table;
+    position: relative;
+}
+.dboard-userimg-div .userimg-grid{
+    width:100%;
+    // display: block;
+    margin:0 auto;
+    left:0;
+    right:0;
+    padding: 0 20px;
+}
+
+.userimg-roundplaceholder{
+    width:90px;
+    height:90px;
+    border-radius: 50%;
+    background-position: center !important;
+    background-size: 50px 5px;
+    margin: 0 auto;
+    position: relative;
+    img{
+        width:100%;
+        height:100%;
+    }
+}
+.userimg-round{
+    width:90px;
+    height:90px;
+    border-radius: 50%;
+    // background: #ffffff url(../assets/images/user-shape.png);
+    background-repeat: space !important;
+    background-position: top !important;
+    background-size: cover !important;
+    overflow: hidden;
+    margin: 0 auto;
+    img{
+        width:100%;
+        height:100%;
+    }
+}
+
+}

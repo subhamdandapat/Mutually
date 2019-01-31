@@ -1,0 +1,96 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle class="sidenav">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Skill</ion-title>
+    <!-- <ion-icon name="add"></ion-icon> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="cover">
+    <ion-grid class="userimg-grid">
+      <ion-row class="border">
+
+        <ion-col col-12 text-center no-padding>
+
+          <!-- <div class="userimg-round"> <img src="{{imageId}}" /> <div class="overlay"> <button ion-button clear no-margin (click)="presentActionSheet()"> <ion-icon name="camera"></ion-icon> </button> </div> </div> -->
+          <div class="userimg-roundplaceholder"(click)="presentActionSheet()" [ngStyle]="{'background':'#ffffff url(assets/images/avatar.png) no-repeat'}">
+            <div *ngIf="imageId" class="userimg-round" [ngStyle]="{'background-image': 'url(' + imageId + ')'}"> </div>
+            <div class="overlay">
+              <button ion-button clear no-margin>
+                <!-- <ion-icon name="camera"></ion-icon> -->
+
+
+                <p>{{uploadP}}</p>
+                <!-- <ion-select [(ngModel)]="imgvalue">
+                  <ion-option value="Fitness/Wellness">Upload videos</ion-option>
+                  <ion-option value="Art/Design">Like videos</ion-option>
+                  <ion-option value="Music/Performing Arts">Upload Photos</ion-option>
+                </ion-select> -->
+
+
+              </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item>
+      <ion-label class="m0" color="primary" floating>Title</ion-label>
+      <ion-input [(ngModel)]="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="m0" color="primary" floating>Category</ion-label>
+      <ion-input [(ngModel)]="category"></ion-input>
+    </ion-item>
+    <ion-item class="item-leave-height">
+      <ion-label>Share to</ion-label>
+      <ion-select>
+        <ion-option value="Friends">Friends</ion-option>
+        <ion-option value="Public">Public</ion-option>
+        <ion-option value="Private">Private</ion-option>
+      </ion-select>
+    </ion-item>
+    <!-- <ion-item class="item-leave-height"> -->
+      <!-- <ion-label>Video Quality</ion-label>
+      <ion-select>
+        <ion-option value="720p">720p</ion-option>
+        <ion-option value="360p">360p</ion-option>
+        <ion-option value="144p">144p</ion-option>
+      </ion-select> -->
+    <!-- </ion-item> -->
+    <ion-grid>
+      <ion-row radio-group>
+        <ion-col col->
+          <div>
+            <ion-checkbox  value="Beginner" [(ngModel)]="a"></ion-checkbox>
+
+            <ion-label class="fnt" value="Beginner">Beginner</ion-label>
+          </div>
+        </ion-col>
+        <ion-col col-4>
+          <div>
+            <ion-checkbox  value="Intermidiate" [(ngModel)]="b"></ion-checkbox>
+
+            <ion-label class="fnt">Intermidiate</ion-label>
+
+          </div>
+        </ion-col>
+        <ion-col col-4>
+          <div>
+
+            <ion-checkbox value="Advance" [(ngModel)]="c"></ion-checkbox>
+            <ion-label class="fnt">Advance</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <button ion-button class="save" (click)="uploadImage()">Media</button>
+  </div>
+</ion-content>

@@ -1,0 +1,200 @@
+page-addskill {
+
+    ion-navbar.toolbar.toolbar-md {
+        background: #4d3f9c;
+    }
+    .toolbar-background.toolbar-background-md {
+        background: transparent;
+    }
+    ion-icon {
+        float: right;
+        color: #fff;
+        font-size: 34px;
+        position: absolute;
+        right: 11px;
+        top: 17%;
+        bottom: 0;
+        margin: 0 auto;
+    }
+   
+    .toolbar-title-md {
+        text-align: center;
+        margin-left: -1.3em;
+        color: #fff;
+    }
+    img.uploadedImage {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+    }
+    .badge-md {
+        border-radius: 0;
+        color: #4989fc;
+        background-color: transparent;
+        font-size: 13px;
+    }
+    ion-label {
+        font-size: 15px;
+        color: grey;
+        font-weight: 500;
+    }
+    ion-item.noBorder .item-inner {
+        border-bottom: none !important;
+    }
+    .backImg {
+        background: url(../assets/imgs/123.png);
+        height: 300px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    img.uploadedImage {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .border {
+        border: 1px solid #aaa;
+        margin: 5px 0;
+    }
+    .toolbar-background.toolbar-background-md {
+        background: transparent;
+    }
+    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        display: none;
+    }
+    ion-label {
+        color: #999 !important;
+    }
+    ion-icon {
+        float: right;
+        color: #fff;
+        font-size: 34px;
+        position: absolute;
+        right: 11px;
+        top: 17%;
+        bottom: 0;
+        margin: 0 auto;
+    }
+    ion-navbar.toolbar.toolbar-md {
+        background: #4d3f9c;
+    }
+    .toolbar-title-md {
+        text-align: center;
+        margin-left: -1.3em;
+        color: #fff;
+    }
+    ion-content.content.content-md {
+        background: #eaeaea;
+    }
+    .item-leave-height {
+        margin: 1em auto;
+    }
+    .item {
+        margin: 0 0 15px 0;
+        background: #eaeaea;
+    }
+    .m0 {
+        margin: 0;
+    }
+    .radio {
+        font-size: 17px;
+        color: #616062;
+        margin: 1em 13px;
+        vertical-align: middle;
+        .radios {
+            margin: 0 1em;
+        }
+        .adjust {
+            margin: 0 0.5em;
+        }
+        .radio-icon {
+            transform: scale(1.5);
+        }
+        .radio-md .radio-checked {
+            border-color: #8356c8;
+            background: url(../../assets/imgs/checked.png);
+            background-size: cover;
+        }
+        .radio-md .radio-inner {
+            background: none;
+        }
+        .radio-md .radio-icon {
+            border-color: #8356c8;
+        }
+    }
+    .other {
+        color: #8356c8;
+        font-size: 17px;
+        span {
+            color: #42039c;
+        }
+    }
+    ion-checkbox.checkbox.checkbox-md {
+        transform: scale(1.5);
+        border-radius: 50%;
+        margin: 0 10px;
+        vertical-align: middle;
+    }
+    .checkbox-md .checkbox-checked {
+        border-color: #8356c8;
+        background-color: #8356c8;
+        border-radius: 50%;
+    }
+    .checkbox-md .checkbox-icon {
+        border-radius: 50%;
+        border-color: #8356c8;
+        background-color: #8356c8;
+    }
+    .grid ion-col.col {
+        margin: 1em 0;
+    }
+    .datetime-md .datetime-placeholder {
+        background-image: url('../../assets/imgs/clander.png');
+        background-size: 100% 100%;
+    }
+    ion-row.border.row {
+        border: 2px dotted #eaeaea;
+        height: 65px;
+        margin-bottom: 10px;
+        p {
+            color: #988d8d;
+        }
+    }
+    .save {
+        background: #4d3f9c;
+        width: 100%;
+    }
+    .cover {
+        background: #fff;
+        padding: 10px;
+    }
+    
+    ion-checkbox.checkbox.checkbox-md {
+        transform: scale(1) !important;
+        margin: 0 !important;
+        
+        
+    }
+    ion-label.fnt.label.label-md {
+        margin: 0;
+        display: inline-block;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    ion-card ion-icon {
+        position: inherit !important;
+        color: #8f8b8b !important;
+    }
+    .clr {
+        color: #827f7f;
+    }
+        font-size: 9px;
+        font-weight: 600;
+        margin-left: 7px;
+    }
+    span.beg {
+        font-size: 9px;
+    }
+    span.dwn ion-icon {
+        font-size: 17px;
+        color: #000 !important;
+    }

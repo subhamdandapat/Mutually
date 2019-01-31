@@ -1,0 +1,239 @@
+<ion-header>
+  
+    <ion-navbar>
+            <button ion-button menuToggle class="sidenav" >
+                    <ion-icon name="menu"></ion-icon>
+                  </button>
+      <ion-title>My Interest</ion-title>
+      <ion-icon name="add" (click)="moveToAddinterest()"></ion-icon>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-item class="item-leave-height">
+      <ion-label>{{indata.mainCategory}}</ion-label>
+    </ion-item>
+  
+    <ion-item class="item-leave-height">
+      <ion-label>{{indata.subCategory}}</ion-label>
+    </ion-item>
+  
+    <!-- <div class="radio" radio-group [(ngModel)]="indata.type">
+      <span class="radios" >
+       
+        <ion-radio value="a"></ion-radio>
+        Begineer
+      </span>
+  
+      <span class="radios">
+        <ion-radio value="b"></ion-radio>
+        Intermediate
+      </span>
+      <br>
+      <span class="radios">
+        <ion-radio value="c"></ion-radio>
+        Advanced
+      </span>
+      <span class="adjust">
+        <ion-radio value="d"></ion-radio>
+        Pro
+      </span>
+    </div> -->
+
+
+
+    <div  radio-group >
+        <ion-list radio-group [(ngModel)]="indata.type">
+            <ion-item>
+              <ion-label> Begineer</ion-label>
+              <ion-radio value="a" [disabled]="true"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Intermediate</ion-label>
+              <ion-radio value="b" [disabled]="true"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Advanced</ion-label>
+              <ion-radio value="c" [disabled]="true"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Pro</ion-label>
+                <ion-radio value="d" [disabled]="true"></ion-radio>
+              </ion-item>
+        </ion-list>
+      </div>
+
+
+
+
+
+
+
+
+
+  
+    <ion-item>
+        <ion-textarea  [(ngModel)]="indata.hobby" readonly></ion-textarea>
+      </ion-item>
+      <p class="other">Other Interest</p>
+      <ion-item>
+          <ion-label>{{other}}</ion-label>
+          <ion-input readonly></ion-input>
+        </ion-item>
+  
+        <p class="other">Type of person/Preferences</p>
+  
+  
+        <ion-grid class="grid">
+            <ion-row>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="Indoors"  [(ngModel)]="ty1" [disabled] = "true"></ion-checkbox>
+                     Indoors
+                  </span>
+  
+               </ion-col>
+               <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="Outdoors" [(ngModel)]="ty2"  [disabled] = "true"></ion-checkbox>
+                      Outdoors
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="Citylife" [(ngModel)]="ty3"  [disabled] = "true"></ion-checkbox>
+                      City Life
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="surburbanlife" [(ngModel)]="ty4"  [disabled] = "true"></ion-checkbox>
+                      SurburbanLife
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="rural"  [(ngModel)]="ty5"  [disabled] = "true"></ion-checkbox>
+                      RuralLife
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox  value="warm" [(ngModel)]="ty6"  [disabled] = "true"></ion-checkbox>
+                      Warm Weather
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="cold"  [(ngModel)]="ty7"  [disabled] = "true"></ion-checkbox>
+                      Cold Weather
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox  value="introvert" [(ngModel)]="ty8"  [disabled] = "true"></ion-checkbox>
+                      Introvert
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="extrovert" [(ngModel)]="ty9"  [disabled] = "true"></ion-checkbox>
+                      Extrovert
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                <span>
+                    <ion-checkbox value="extrovertedintrovert" [(ngModel)]="ty10" [disabled] = "true"></ion-checkbox>
+                    Extroverted_Introvert
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="vphActive" [(ngModel)]="ty11" [disabled] = "true"></ion-checkbox>
+                    Very Physically Active
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="sphActive" [(ngModel)]="ty12" [disabled] = "true"></ion-checkbox>
+                    Semi Physically Active
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="nphActive" [(ngModel)]="ty13" [disabled] = "true"></ion-checkbox>
+                    Not Physically Active
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="messy" [(ngModel)]="ty14" [disabled] = "true"></ion-checkbox>
+                    Messy
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="omessy" [(ngModel)]="ty15" [disabled] = "true"></ion-checkbox>
+                    Organized Messy
+                </span>
+            </ion-col>
+            <ion-col col-6>
+                <span>
+                    <ion-checkbox value="clean" [(ngModel)]="ty16" [disabled] = "true"></ion-checkbox>
+                    Clean
+                </span>
+            </ion-col>
+            </ion-row>
+        </ion-grid>
+        <p class="other">Favorites - <span>Pick 3</span></p>
+  
+  
+        <ion-grid class="grid">
+            <ion-row>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox  value="music" [(ngModel)]="fv1"  [disabled] = "true"></ion-checkbox>
+                      Music
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="food" [(ngModel)]="fv2"  [disabled] = "true"></ion-checkbox>
+                      Food
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="book" [(ngModel)]="fv3"  [disabled] = "true"></ion-checkbox>
+                      Book
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox  value="pets" [(ngModel)]="fv4"  [disabled] = "true"></ion-checkbox>
+                      Pets
+                  </span>
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="tvShows" [(ngModel)]="fv5"  [disabled] = "true"></ion-checkbox>
+                      TV Shows
+                  </span>
+  
+              </ion-col>
+              <ion-col col-6>
+                  <span>
+                      <ion-checkbox value="season" [(ngModel)]="fv6"  [disabled] = "true"></ion-checkbox>
+                      Season
+                  </span>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+  </ion-content>

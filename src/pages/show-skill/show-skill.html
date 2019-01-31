@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle class="sidenav">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Skills</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div *ngFor="let skill of skillData" class="border">
+    <ion-item text-center class="noBorder">
+      <div class="backImg">
+        <img src="https://iontest.herokuapp.com/skillShareImage/{{skill.image}}" class="uploadedImage" alt="">
+      </div>
+    </ion-item>
+    <ion-item>
+      User Name
+      <ion-badge item-end>{{skill.username}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-badge item-start>{{skill.description}}</ion-badge>
+    </ion-item> -->
+
+
+
+  <div *ngFor="let skill of skillData">
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/logo.png">
+        </ion-avatar>
+        <h2>{{skill.userName}}</h2>
+        <p>{{skill.time}}
+          <span class="game">{{skill.category}}</span>
+          <span class="beg">{{skill.type}} </span>
+          <span class="dwn">
+            <ion-icon name="download"></ion-icon>
+          </span>
+        </p>
+      </ion-item>
+      <ion-card-content>
+        <p>{{skill.title}}</p>
+      </ion-card-content> 
+      <img src="https://iontest.herokuapp.com/skillShareImage/{{skill.image}}" alt="">
+
+     
+
+      <ion-row>
+        <ion-col col-3>
+          <button ion-button icon-start clear small (click)="like(lc)">
+            <ion-icon name="ios-heart-outline"></ion-icon>
+            <div class="clr" >Like</div>
+          </button>
+        </ion-col>
+        <ion-col col-5>
+          <button ion-button icon-start clear small>
+            <ion-icon name="ios-text-outline"></ion-icon>
+            <div class="clr">comments</div>
+          </button>
+        </ion-col>
+
+        <ion-col col-4>
+          <button ion-button icon-start clear small>
+            <ion-icon name="ios-redo-outline"></ion-icon>
+            <div class="clr"> share</div>
+          </button>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-card>
+  </div>
+
+</ion-content>
